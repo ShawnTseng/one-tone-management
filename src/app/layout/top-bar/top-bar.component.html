@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-flat-button color="primary">
+    <button mat-flat-button color="primary" [routerLink]="['/']">
       <mat-icon>face</mat-icon>
       靈魂頑童
     </button>
-    <button mat-flat-button color="primary">點名</button>
-    <button mat-flat-button color="primary">學生</button>
-    <button mat-flat-button color="primary">老師</button>
-    <button mat-flat-button color="primary">課程</button>
+    <button mat-flat-button color="primary" [routerLink]="['/']" routerLinkActive="router-link-active">點名</button>
+    <button mat-flat-button color="primary" [routerLink]="['/student']" routerLinkActive="router-link-active">學生</button>
+    <button mat-flat-button color="primary" [routerLink]="['/teacher']" routerLinkActive="router-link-active">老師</button>
+    <button mat-flat-button color="primary" [routerLink]="['/']" routerLinkActive="router-link-active">課程</button>
   </mat-toolbar-row>
 </mat-toolbar>
