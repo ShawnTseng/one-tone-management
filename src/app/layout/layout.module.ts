@@ -7,13 +7,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { StudentModule } from '../student/student.module';
 import { TeacherModule } from '../teacher/teacher.module';
+import { CourseModule } from '../course/course.module';
 
 @NgModule({
   declarations: [TopBarComponent],
   imports: [
     CommonModule, RouterModule,
     MatIconModule, MatButtonModule, MatToolbarModule,
-    StudentModule, TeacherModule
+    StudentModule, TeacherModule, CourseModule
   ],
   exports: [
     TopBarComponent
