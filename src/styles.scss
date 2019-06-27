@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+// 中文字體設定
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// 第三方套件:Angular Material，中文字體設定
+@import "~@angular/material/theming";
+
+$custom-typography: mat-typography-config(
+  $font-family: "Noto Sans TC"
+);
+
+// 覆蓋所有 Angular Material 元件字體
+@include mat-core($custom-typography);
