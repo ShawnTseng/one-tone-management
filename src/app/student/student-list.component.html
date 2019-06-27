@@ -1,0 +1,11 @@
+學生清單
+<div *ngFor="let student of $studentList | async">
+  編號:{{student.id}}
+  <br>
+  學生姓名:{{student.studentName}}
+  <br>
+  聯絡電話:{{student.phone}}
+  <br>
+  家長姓名:{{student.parentName}}
+  <hr>
+</div>

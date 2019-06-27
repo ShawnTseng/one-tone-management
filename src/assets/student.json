@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "studentName": "Shawn",
+    "phone": "0912345678",
+    "parentName": "Shawn's Mom"
+  },
+  {
+    "id": 2,
+    "studentName": "Koji",
+    "phone": "0923456789",
+    "parentName": "Koji's Mom"
+  }
+]
