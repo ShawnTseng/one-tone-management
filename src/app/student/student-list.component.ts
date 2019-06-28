@@ -16,6 +16,18 @@ export class StudentListComponent implements OnInit {
   constructor(private studentService: StudentService) { }
 
   ngOnInit() {
+    this.loadData();
+  }
+
+  selectRow(rowData) {
+    console.log('rowData:', rowData);
+  }
+
+  add() {
+
+  }
+
+  private loadData() {
     this.$studentList = this.studentService.getStudentList();
   }
 }
