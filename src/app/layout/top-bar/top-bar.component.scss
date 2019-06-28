@@ -1,5 +1,5 @@
 @import "~@angular/material/theming";
 
 .router-link-active {
-  background-color: map-get($mat-blue, A100);
+  background-color: map-get($mat-indigo, A100);
 }
