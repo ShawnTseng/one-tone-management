@@ -6,6 +6,8 @@ app-top-bar {
   z-index: 2;
 }
 
-.content {
-  margin-top: 64px;
+// 預留高度
+.topbar {
+  min-height: 64px;
+  width: 100%;
 }
