@@ -7,7 +7,12 @@ import { StudentService } from './student.service';
   styleUrls: ['./student-list.component.scss']
 })
 export class StudentListComponent implements OnInit {
+  /** 學生清單來源 */
   $studentList;
+
+  /** 顯示欄位 */
+  displayedColumns: string[] = ['id', 'studentName', 'phone', 'parentName', 'course', 'annualFeeDate'];
+
   constructor(private studentService: StudentService) { }
 
   ngOnInit() {
