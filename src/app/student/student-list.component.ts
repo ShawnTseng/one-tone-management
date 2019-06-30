@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { StudentService } from './student.service';
+import { Student } from './student';
 
 @Component({
   selector: 'app-student-list',
@@ -11,29 +11,20 @@ export class StudentListComponent implements OnInit {
   /** 學生清單來源 */
   $studentList;
 
+  /** 被選定的學生 */
+  selectedStudent;
+
   /** 顯示欄位 */
   displayedColumns: string[] = ['id', 'studentName', 'phone', 'parentName', 'course', 'annualFeeDate'];
 
-  constructor(private studentService: StudentService, private dialog: MatDialog) { }
+  constructor(private studentService: StudentService) { }
 
   ngOnInit() {
     this.loadData();
   }
 
-  selectRow(rowData) {
-    console.log('rowData:', rowData);
-  }
-
-  openAddPage() {
-    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-    //   width: '250px',
-    //   // data: { name: this.name, animal: this.animal }
-    // });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    //   this.animal = result;
-    // });
+  selectRow(data: Student) {
+    this.selectedStudent = data;
   }
 
   private loadData() {
