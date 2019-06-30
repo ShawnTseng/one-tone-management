@@ -32,11 +32,11 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row"
-        [routerLink]="['/student/detail', row.id]"></tr>
+        [routerLink]="['/student/detail', 'browse', row.id]"></tr>
     </table>
   </div>
   <mat-card-actions>
-    <button mat-flat-button color="accent" [routerLink]="['/student/create']">
+    <button mat-flat-button color="accent" [routerLink]="['/student/detail', 'create']">
       <mat-icon>add</mat-icon>
     </button>
   </mat-card-actions>

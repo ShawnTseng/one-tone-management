@@ -10,10 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentListComponent } from './student-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
-import { StudentCreateComponent } from './student-create/student-create.component';
 
 @NgModule({
-  declarations: [StudentListComponent, StudentDetailComponent, StudentCreateComponent],
+  declarations: [StudentListComponent, StudentDetailComponent],
   imports: [
     CommonModule, HttpClientModule, StudentRoutingModule,
     MatButtonModule, MatIconModule, MatCardModule, MatTableModule, MatFormFieldModule, MatInputModule

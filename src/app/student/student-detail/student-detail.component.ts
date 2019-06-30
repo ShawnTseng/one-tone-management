@@ -9,16 +9,19 @@ import { Student } from '../student';
   styleUrls: ['./student-detail.component.scss']
 })
 export class StudentDetailComponent implements OnInit {
+  /** 頁面狀態 */
+  status;
+
   selectedStudent: Student;
 
   constructor(private route: ActivatedRoute, private studentService: StudentService) { }
 
   ngOnInit() {
-    this.selectedStudent = this.getStudent();
-  }
-
-  getStudent() {
-    const id = +this.route.snapshot.paramMap.get('id');
-    return this.studentService.getStudent(id);
+    this.status = this.route.snapshot.paramMap.get('status');
+    const check = this.route.snapshot.paramMap.has('id');
+    if (check) {
+      const id = +this.route.snapshot.paramMap.get('id');
+      this.selectedStudent = this.studentService.getStudent(id);
+    }
   }
 }
