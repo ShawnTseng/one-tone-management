@@ -31,11 +31,11 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row" (click)="selectRow(row)"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row" [routerLink]="['/student/detail', row.id]"></tr>
     </table>
   </div>
   <mat-card-actions>
-    <button mat-flat-button color="accent" routerLink="/student/{{selectedStudent?.id}}">
+    <button mat-flat-button color="accent" [routerLink]="['/student/create']">
       <mat-icon>add</mat-icon>
     </button>
   </mat-card-actions>

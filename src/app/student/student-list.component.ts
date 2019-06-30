@@ -11,9 +11,6 @@ export class StudentListComponent implements OnInit {
   /** 學生清單來源 */
   $studentList;
 
-  /** 被選定的學生 */
-  selectedStudent;
-
   /** 顯示欄位 */
   displayedColumns: string[] = ['id', 'studentName', 'phone', 'parentName', 'course', 'annualFeeDate'];
 
@@ -21,10 +18,6 @@ export class StudentListComponent implements OnInit {
 
   ngOnInit() {
     this.loadData();
-  }
-
-  selectRow(data: Student) {
-    this.selectedStudent = data;
   }
 
   private loadData() {

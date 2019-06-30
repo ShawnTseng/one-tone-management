@@ -8,9 +8,10 @@ import { MatTableModule } from '@angular/material/table';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentListComponent } from './student-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { StudentCreateComponent } from './student-create/student-create.component';
 
 @NgModule({
-  declarations: [StudentListComponent, StudentDetailComponent],
+  declarations: [StudentListComponent, StudentDetailComponent, StudentCreateComponent],
   imports: [
     CommonModule, HttpClientModule, StudentRoutingModule,
     MatButtonModule, MatIconModule, MatCardModule, MatTableModule
