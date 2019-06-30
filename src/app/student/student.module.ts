@@ -5,6 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { StudentRoutingModule } from './student-routing.module';
 import { StudentListComponent } from './student-list.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
@@ -14,7 +16,7 @@ import { StudentCreateComponent } from './student-create/student-create.componen
   declarations: [StudentListComponent, StudentDetailComponent, StudentCreateComponent],
   imports: [
     CommonModule, HttpClientModule, StudentRoutingModule,
-    MatButtonModule, MatIconModule, MatCardModule, MatTableModule
+    MatButtonModule, MatIconModule, MatCardModule, MatTableModule, MatFormFieldModule, MatInputModule
   ]
 })
 export class StudentModule { }
