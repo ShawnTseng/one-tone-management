@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { StudentService } from './student.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class StudentListComponent implements OnInit {
   /** 顯示欄位 */
   displayedColumns: string[] = ['id', 'studentName', 'phone', 'parentName', 'course', 'annualFeeDate'];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, private dialog: MatDialog) { }
 
   ngOnInit() {
     this.loadData();
@@ -23,8 +24,16 @@ export class StudentListComponent implements OnInit {
     console.log('rowData:', rowData);
   }
 
-  add() {
+  openAddPage() {
+    // const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    //   width: '250px',
+    //   // data: { name: this.name, animal: this.animal }
+    // });
 
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    //   this.animal = result;
+    // });
   }
 
   private loadData() {
