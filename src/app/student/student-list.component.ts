@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { StudentService } from './student.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-student-list',
@@ -13,7 +15,11 @@ export class StudentListComponent implements OnInit {
   /** 顯示欄位 */
   displayedColumns: string[] = ['id', 'studentName', 'phone', 'parentName', 'course', 'annualFeeDate'];
 
-  constructor(private studentService: StudentService) { }
+  $studentListFromFireBase: Observable<any>;
+
+  constructor(private studentService: StudentService, private db: AngularFirestore) {
+    this.$studentListFromFireBase = this.db.collection('student').valueChanges();
+  }
 
   ngOnInit() {
     this.loadData();
