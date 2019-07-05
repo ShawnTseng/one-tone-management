@@ -17,3 +17,8 @@ $custom-typography: mat-typography-config(
 
 // 覆蓋所有 Angular Material 元件字體
 @include mat-core($custom-typography);
+
+// full calendar 樣式
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
