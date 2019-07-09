@@ -32,13 +32,12 @@
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="row"
-        [routerLink]="['/student/detail', 'browse', row.id]"></tr>
+        [routerLink]="['/student/detail', PageStatus.Browse, row.id]"></tr>
     </table>
   </div>
   <mat-card-actions>
-    <button mat-flat-button color="accent" [routerLink]="['/student/detail', 'create']">
+    <button mat-flat-button color="accent" [routerLink]="['/student/detail', PageStatus.Create]">
       <mat-icon>add</mat-icon>
     </button>
   </mat-card-actions>
 </mat-card>
-{{$studentListFromFireBase|async|json}}

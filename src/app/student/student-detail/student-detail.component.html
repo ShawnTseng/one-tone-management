@@ -1,20 +1,39 @@
-status:{{status}}
+<div>
+  status:{{status}}
+</div>
+<button mat-mini-fab color="accent" (click)="save()">
+  <mat-icon>save</mat-icon>
+</button>
 <div>
   <mat-form-field appearance="outline">
     <mat-label>學生姓名</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]="selectedStudent.studentName">
   </mat-form-field>
 </div>
 <div>
   <mat-form-field appearance="outline">
     <mat-label>家長姓名</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]="selectedStudent.parentName">
   </mat-form-field>
 </div>
 <div>
   <mat-form-field appearance="outline">
     <mat-label>電話</mat-label>
-    <input matInput>
+    <input matInput [(ngModel)]="selectedStudent.phone">
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>堂數(擁有/已用/剩餘)</mat-label>
+    <input matInput [(ngModel)]="selectedStudent.ownedCourse" disabled>
+    <input matInput [(ngModel)]="selectedStudent.unusedCourse" disabled>
+    <input matInput [(ngModel)]="selectedStudent.usedCourse" disabled>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field appearance="outline">
+    <mat-label>年費</mat-label>
+    <input matInput [(ngModel)]="selectedStudent.annualFeeDate">
   </mat-form-field>
 </div>
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -15,7 +16,7 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
 @NgModule({
   declarations: [StudentListComponent, StudentDetailComponent],
   imports: [
-    CommonModule, HttpClientModule, StudentRoutingModule,
+    CommonModule, HttpClientModule, FormsModule, StudentRoutingModule,
     MatButtonModule, MatIconModule, MatCardModule, MatTableModule, MatFormFieldModule, MatInputModule,
     AngularFirestoreModule
   ]

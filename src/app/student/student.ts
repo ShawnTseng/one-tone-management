@@ -1,25 +1,25 @@
-export interface Student {
-  /** 編號 */
-  id: number;
+export class Student {
+  /** 編號; TODO:確認作法 */
+  id = 0;
 
   /** 學生姓名 */
-  studentName: string;
+  studentName = '';
 
   /** 聯絡電話 */
-  phone: string;
+  phone = '';
 
   /** 家長姓名 */
-  parentName: string;
+  parentName = '';
 
   /** 擁有堂數 */
-  ownedCourse: number;
+  ownedCourse = 16;
 
   /** 已用堂數 */
-  usedCourse: number;
+  usedCourse = 0;
 
   /** 未用堂數 */
-  unusedCourse: number;
+  unusedCourse = 16;
 
   /** 最後一次繳交年費的日期 */
-  annualFeeDate: Date;
+  annualFeeDate: Date = new Date();
 }
